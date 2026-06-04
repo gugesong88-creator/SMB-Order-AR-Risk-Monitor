@@ -2,6 +2,8 @@
 
 中小企业服务订单与应收账款风险预警系统
 
+🚀 Live Demo: https://smb-order-ar-risk-monitor-2rz65v4k6ep5cbesyprfs4.streamlit.app/
+
 ![Dashboard Preview](assets/dashboard.png)
 
 SMB Order & AR Risk Monitor is a Streamlit-based business risk monitoring tool that simulates order overdue tracking and accounts receivable risk alerts for commercial operations teams.
