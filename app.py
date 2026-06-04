@@ -243,14 +243,14 @@ def main() -> None:
             "下载 HTML 通报文本",
             data=html_notice,
             file_name="risk_notice.html",
-            mime="text/html",
+            mime="text/html; charset=utf-8",
         )
     with download_cols[2]:
         st.download_button(
             "下载邮箱名单 txt",
             data=email_list,
             file_name="risk_email_list.txt",
-            mime="text/plain",
+            mime="text/plain; charset=utf-8",
         )
 
 
