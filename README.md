@@ -2,6 +2,16 @@
 
 中小企业服务订单与应收账款风险预警系统
 
+![Dashboard Preview](assets/dashboard.png)
+
+SMB Order & AR Risk Monitor is a Streamlit-based business risk monitoring tool that simulates order overdue tracking and accounts receivable risk alerts for commercial operations teams.
+
+本项目基于企业商务运营中的订单超期、逾期通报与应收账款预警场景，使用模拟数据复现从 Excel 人工筛选到自动化风险识别、看板展示和通报生成的办公流程。
+
+## Why this project
+
+In commercial operations, teams often need to manually download order data, filter overdue records in Excel, match responsible supervisors, generate reports, and prepare email notices. This project abstracts that workflow into a rule-based monitoring tool and demonstrates how repetitive business operations can be productized through Python, Pandas, and Streamlit.
+
 ## 项目背景
 
 本项目基于企业商务实习场景复盘，模拟服务订单超期、逾期通报和应收账款风险预警流程。项目目标是把人工 Excel 筛选、匹配责任人、统计 KPI、生成报表和整理通报文本的流程产品化，提升商务、运营和数据分析岗位中的日常办公效率。
@@ -17,7 +27,15 @@
 - 使用 Streamlit + Plotly 展示 KPI、图表和明细表。
 - 一键下载 Excel 风险报告、HTML 内部通报文本和责任人邮箱名单。
 
-## 业务规则
+## Business Rules
+
+- F-type orders are considered overdue after 7 days.
+- M-type orders are considered overdue after 30 days.
+- Orders within 7 days before the deadline are marked as due soon.
+- AR invoices are overdue when unpaid amount > 0 and current date > due date.
+- Risk levels are assigned based on order status, overdue days, and unpaid amount.
+
+## 业务规则说明
 
 订单超期规则：
 
@@ -99,14 +117,6 @@ python src/data_generator.py
 - `sample_mapping.csv`：服务站责任人 Mapping 表，包含督导、邮箱和区域。
 
 模拟数据覆盖已超期、即将超期和正常样本，日期围绕当前日期前后生成。所有公司、人员和邮箱均为虚构数据。
-
-## 页面截图占位
-
-后续上传 GitHub 时可在此处补充页面截图：
-
-```text
-docs/dashboard-screenshot.png
-```
 
 ## 可写进简历的项目描述
 
